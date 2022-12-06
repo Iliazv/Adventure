@@ -1,0 +1,687 @@
+.tour {
+    padding: 0 0 50px 0;
+}
+
+.tour__image {
+    width: 300px;
+    height: 180px;
+}
+
+.tour__image-block {
+    position: relative;
+}
+
+.tour__country-label {
+    position: absolute;
+    font-family: Montserrat;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    background-color: #F0AB00;
+    color: white;
+    padding: 5px 10px;
+}
+
+.tour__proposal {
+    display: flex;
+}
+
+.tour__information {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+}
+
+.tour__icon {
+    width: 16px;
+    height: 16px;
+}
+
+.tour__card {
+    display: flex;
+    width: 900px;
+    background-color: rgba(204, 231, 240, 0.3);
+    padding: 30px 30px 120px 30px;
+    border-top: 1px solid rgba(172, 134, 134, 0.1);
+    border-left: 1px solid rgba(172, 134, 134, 0.1);
+    border-bottom: 1px solid rgba(172, 134, 134, 0.1);
+    border-right: 2px solid rgba(172, 134, 134, 0.2);
+}
+
+.tour__text {
+    padding: 0 0 0 30px;
+}
+
+.tour__remove {
+    padding: 0 0 0 5px;
+}
+
+.tour__location {
+    padding: 15px 0 0 0;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.tour__feeding {
+    font-family: Montserrat;
+    padding: 14px 0 0 0;
+    font-weight: 700;
+    font-size: 13px;
+    color: grey;
+}
+
+.tour__mark {
+    font-family: Montserrat;
+    display: inline-block;
+    margin: 30px 0 0 0;
+    border: 1px solid #00af8657;
+    padding: 7px 11px;
+    border-radius: 3px;
+    color: #00af86;
+    font-weight: 500;
+}
+
+.proposal__feedback {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 30px 0 0 0;
+}
+
+.proposal__mark {
+    font-family: Montserrat;
+    font-size: 20px;
+    display: inline-block;
+    margin: 12px 0 0 0;
+    border: 1px solid #00af8657;
+    padding: 8px 13px;
+    border-radius: 3px;
+    color: #00af86;
+    font-weight: 500;
+}
+
+.tour__rate {
+    padding: 3px 0 0 0;
+}
+
+.tour__star {
+    width: 19px;
+    height: 19px;
+}
+
+.tour__link {
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+}
+
+.tour__price {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    padding: 20px;
+    background-color: antiquewhite;
+}
+
+.tour__date {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: bold;
+    color: #6483ad;
+}
+
+.tour__level {
+    padding: 30px 0 0 0;
+    font-family: Montserrat;
+    font-size: 11px;
+    font-weight: bold;
+    color: grey;
+}
+
+.tour__cost {
+    font-family: Montserrat;
+    padding: 18px 0 0 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+}
+
+.proposal__cost {
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+}
+
+.tour__highlight {
+    font-family: Montserrat;
+    padding: 18px 0 0 0;
+    color: #F0AB00;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.proposal__hightlight {
+    font-family: Montserrat;
+    padding: 18px 0 0 0;
+    color: #F0AB00;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.tour__fly {
+    font-family: Montserrat;
+    padding: 8px 0 0 0;
+    color: #0093d0;
+    font-size: 12px;
+    font-weight: 600;
+
+}
+
+.tour__credit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 27px 0 0 0;
+}
+
+.tour__percent-icon {
+    width: 30px;
+    height: 30px;
+    margin: 5px 0 0 0;
+}
+
+.tour__conditions {
+    font-family: Montserrat;
+    padding: 8px 0 0 7px;
+    color: black;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+}
+
+.proposal__condition {
+    font-family: Montserrat;
+    padding: 8px 0 0 7px;
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.tour__button {
+    padding: 20px 0 0 0;
+    align-self: center;
+    margin: 0 0 0 0;
+}
+
+.proposal__button {
+    padding: 20px 0 0 0;
+    align-self: center;
+    margin: -20px 0 0 0;
+}
+
+.tour__submit {
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: #0093d0;
+    padding: 14px 55px;
+    border-radius: 4px;
+    transition: 0.03s ease;
+}
+
+.tour__submit:hover {
+    background-color: #027db1;
+}
+
+.proposal__info {
+    padding: 10px 0 0 30px;
+}
+
+.proposal__row {
+    display: flex;
+    flex-direction: row;
+}
+
+.proposal__comment-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.proposal__name {
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.proposal__name-small {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 22px 0 0 0;
+    color:rgb(77, 77, 77);
+}
+
+#big img {
+    width: 800px;
+    height: 410px;
+}
+
+#sub img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.proposal__location {
+    padding: 15px 0 25px 0;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.proposal__rate {
+    padding: 2px 0 0 30px;
+}
+
+.proposal__body {
+    display: flex;
+}
+
+.proposal__image {
+    max-width: 100%;
+    min-width: 560px;
+}
+
+.proposal__order {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.proposal__details {
+    max-width: 800px;
+    font-family: Montserrat;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.proposal__title {
+    padding: 40px 0 20px 0;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.proposal__subtitle {
+    text-align: center;
+    align-self: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1593FF;
+    border-bottom: 2px solid #1593FF;
+    padding: 10px;
+    width: 700px;
+}
+
+.proposal__window {
+    display: flex;
+    padding: 24px 24px 50px 24px;
+    flex-direction: column;
+    max-width: 800px;
+    min-height: 370px;
+    border: 1px solid grey;
+    background-color: rgba(204, 231, 240, 0.3);
+    border: 1px solid rgba(172, 134, 134, 0.1);
+}
+
+.proposal__text-field {
+    padding: 35px 0 0 0;
+}
+
+.proposal__country {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 0 0 10px;
+    margin: -5px 0 0 0;
+    color:rgb(77, 77, 77);
+}
+
+.proposal__commenting {
+    max-width: 800px;
+    height: 600px;
+    border: 1px solid rgba(172, 134, 134, 0.1);
+    padding: 27px;
+    background-color: rgb(250, 250, 245);
+    overflow-y: scroll;
+}
+
+.proposal__hotel-name {
+    font-family: Montserrat;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.proposal__hotel-location {
+    font-size: 13px;
+}
+
+.proposal__commend {
+    margin: 20px 0 0 0;
+    padding: 10px 0;
+    border-top: 2px solid #c8c8c870;
+    border-bottom: 2px solid #c8c8c870;
+}
+
+.proposal__submit {
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    background-color: black;
+    padding: 7px 9px;
+}
+
+.grade__name {
+    font-family: Montserrat;
+    width: 500px;
+    height: 30px;
+    border-radius: 4px;
+    padding: 0 0 0 7px;
+    font-size: 14px;
+}
+
+.grade__label {
+    font-family: Montserrat;
+    font-size: 16px;
+    padding: 0 0 20px 0;
+}
+
+.grade__input input {
+    font-family: Montserrat;
+    width: 500px;
+    height: 30px;
+    border-radius: 4px;
+    padding: 0 0 0 7px;
+    font-size: 14px;
+    border: 1px solid grey;
+}
+
+
+.rating-area {
+    width: 150px;
+    margin: -10px 0 0 -30px;
+    padding: 0 0 15px 0;
+}
+.rating-area:not(:checked) > input {
+    display: none;
+}
+.rating-area:not(:checked) > label {
+    float: right;
+    width: 20px;
+    cursor: pointer;
+    font-size: 32px;
+    line-height: 36px;
+    color: lightgrey;
+    text-shadow: 1px 1px #bbb;
+    margin-left: 6px;
+}
+.rating-area:not(:checked) > label:before {
+    content: '●';
+}
+.rating-area > input:checked ~ label {
+    color: #00af86;
+    text-shadow: 1.8px 1.8px #32e5d1;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+    color: #00af86;
+}
+
+.grade__textarea textarea {
+    font-family: Montserrat;
+    width: 500px;
+    height: 100px;
+    border-radius: 4px;
+    padding: 5px 0 0 7px;
+    font-size: 14px;
+    border: 1px solid grey;
+}
+
+.grade__tag {
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0 0 8px 0;
+}
+
+.grade__input {
+    margin: 40px 0 0 0;
+}
+
+.grade__textarea {
+    margin: 40px 0 5px 0;
+}
+
+.grade__button {
+    padding: 0 0 10px 0;
+}
+
+.proposal__user-name {
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 15px 0 0 0;
+}
+
+.proposal__user-text {
+    font-family: Montserrat;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 5px 0 0 0;
+}
+
+.proposal__response {
+    padding: 0 0 15px 0;
+    border-bottom: 2px solid #c8c8c870;
+}
+
+@media (max-width: 1140px) {
+    .tour__card {
+        min-width: 600px;
+    }
+}
+
+@media (max-width: 950px) {
+    .tour__price {
+        padding: 16px;
+    }
+
+    .tour__link {
+        font-size: 21px;
+    }
+
+    .tour__card {
+        padding: 20px 20px 120px 20px;
+    }
+
+    .tour__text {
+        padding: 0 0 0 20px;
+    }
+
+    .tour__level {
+        padding: 18px 0 0 0;
+    }
+
+    .tour__cost {
+        padding: 14px 0 0 0;
+    }
+    
+    .tour__highlight {
+        padding: 14px 0 0 0;
+        color: #F0AB00;
+        font-size: 32px;
+    }
+
+    .tour__credit {
+        padding: 21px 0 0 0;
+    }
+
+    .tour__image {
+        width: 280px;
+        height: 171px;
+    }
+
+    .tour__star {
+        width: 17px;
+        height: 17px;
+    }
+
+    .proposal__body {
+        display: flex;
+        flex-direction: column;
+    } 
+
+    .proposal__info {
+        padding: 18px 0 0 16px;
+    }
+}
+
+@media (max-width: 860px) {
+    .tour__card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tour__text {
+        padding: 15px 0 0 0;
+    }
+
+    .tour__card {
+        padding: 20px 20px 20px 20px;
+        min-width: 400px;
+    }
+
+    .tour__mark {
+        margin: 15px 0 0 0;
+    }
+
+    .tour__information {
+        justify-content: flex-start;
+    }
+
+    .tour__rate {
+        padding: 16px 0 0 0;
+    }
+
+    .tour__name {
+        width: 267px;
+    }
+
+    .header-advantages {
+        background-size: 1200px 550px;
+    }
+
+    .layer {
+        height: 550px;
+    }
+
+    .main__name {
+        padding: 30px 0 10px 0;
+        font-size: 38px;
+        line-height: 45px;
+    }
+}
+
+@media (max-width: 750px) {
+    .proposal__subtitle {
+        padding: 10px;
+        width: 95%;
+    }
+}
+
+@media (max-width: 620px) {
+    .tour__card {
+        max-width: 250px;
+    }
+
+    .tour__price {
+        max-width: 400px;
+        min-width: 300px;
+    }
+
+    .tour__proposal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main__name {
+        font-size: 31px;
+        line-height: 42px;
+        padding: 0 0 40px 0;
+    }
+
+    .tour__link {
+        font-size: 19px;
+    }
+
+    .tour__name {
+        width: 200px;
+    }
+
+    .proposal__name {
+        font-size: 21px;
+        font-weight: bold;
+    }
+
+    .proposal__image {
+        max-width: 100%;
+        min-width: 360px;
+        max-height: 360px;
+    }
+
+    .proposal__hightlight {
+        font-size: 30px;
+    }
+
+    .tour__submit {
+        padding: 13px 48px;
+    }
+
+    .proposal__image {
+        max-width: 100%;
+        min-width: 310px;
+        max-height: 360px;
+    }
+
+    .proposal__hightlight {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 510px) {
+    .proposal__image {
+        max-width: 100%;
+        min-width: 300px;
+        max-height: 250px;
+    }
+
+    .tour__submit {
+        font-size: 14px;
+        padding: 11px 38px;
+    }
+
+    .grade__input input {
+        width: 100%;
+    }
+
+    .grade__textarea textarea {
+        width: 100%;
+    }
+}

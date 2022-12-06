@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+.gallery {
+    padding: 60px 0 0 0;
+}
+
+.container-gallery {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.gallery__block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -7px;
+}
+
+.gallery__picture {
+    position: relative;
+    width: 326px;
+    height: 190px;
+    padding: 7px;
+    transition: 0.05s ease;
+}
+
+.gallery__picture:hover {
+    z-index: 0;
+    filter: brightness(0.6);
+    transform: scale(1.05);
+}
+
+.image:hover .gallery__search {
+    opacity: 1;
+}
+
+.image {
+    display: inline-block;
+    position: relative;
+}
+
+.list__overlay {
+    transform: scale(1.1);
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: white;
+    background-color: antiquewhite;
+    opacity: 0;
+    width: 320px;
+    height: 170px;
+}
+
+.list__overlay1:hover {
+    opacity: 0;
+    cursor: pointer;
+    filter: brightness(0.6);
+}
+
+.gallery__search {
+    position: absolute;
+    right: 45%;
+    top: 45%;
+    width: 25px;
+    height: 25px;
+    pointer-events: none;
+    opacity: 0;
+    filter: brightness(3);
+    transition: 0.1s ease;
+}
