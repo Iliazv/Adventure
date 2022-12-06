@@ -1,0 +1,166 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" type = 'text/css' href="{% static 'tours/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'tours/images/fav.png' %}" />
+    <title>TravelPassion</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header class="header-advantages">
+                <div class="layer">
+                <div class="container">
+                    <div class="header__row">
+                        <div class="header__logo">
+                            <a href="{% url 'main_page' %}">
+                                <img src="{% static '../static/tours/images/bullon.png' %}" alt="" class="header__logo-logo">
+                                <img src="{% static '../static/tours/images/travel.png' %}" alt="" class="header__logo-image">
+                            </a>
+                        </div>
+                        <nav class="navbar">
+                            <ul class="header__list">
+                                <li><a href="{% url 'main_page' %}" class="header__link">Главная</a></li>
+                                <li><a href="{% url 'tours' %}" class="header__link">Туры</a></li>
+                                <li><a href="{% url 'about' %}" class="header__link header__link_active">О нас</a></li>
+                                <li><a href="{% url 'gallery' %}" class="header__link">Галлерея</a></li>
+                                <li><a href="{% url 'contacts' %}" class="header__link">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="main__reference">
+                        <div class="main__text">
+                            <div class="main__name">
+                                О нашей компании
+                                <p class="main__name_bold">— TravelPassion</p>
+                            </div>
+                            <div class="main__space">
+                                
+                            </div>
+                        </div>                           
+                    </div>
+
+                </header>
+                <div class="container">
+                    <div class="about">
+                        <div class="about__subtitle">
+                            Деятельность компании
+                        </div>
+                        <p class="about__paragraph">
+                            Бренд Coral Travel представлен на рынке с 1995 года. Сегодня оператор занимает лидирующие позиции
+                             в туристической отрасли и позиционируется как марка надежности и качества. Собственные
+                              принимающие компании обслуживают клиентов Coral Travel в Турции, Египте, Греции, Испании, 
+                              ОАЭ, Таиланде, Вьетнаме и Тунисе.
+                        </p>
+                        
+                        <p class="about__paragraph">
+                            Туроператор Coral Travel предлагает лучшие курорты и отели в 40 странах мира, среди которых 
+                            Австрия, Андорра, Бахрейн, Беларусь, Болгария, Вьетнам, Греция, Грузия, Доминиканская Республика,
+                             Египет, Израиль, Индия, Индонезия, Иордания, Испания, Италия, Катар, Кения, Кипр, Куба, Маврикий, 
+                             Мальдивы, Марокко, Мексика, ОАЭ, Россия, Сейшелы, Сингапур, Таиланд, Танзания, Тунис, Турция, 
+                             Узбекистан, Хорватия, Черногория, Шри-Ланка. Идет постоянная работа по открытию новых направлений. Туроператор организует групповые и индивидуальные туры FIT на базе собственных чартерных программ и регулярных рейсов, занимается развитием инсентив-, конгресс-, спортивного и других видов туризма, а также активно продает авиабилеты в онлайн.
+                        </p>
+
+                        <p class="about__paragraph">
+                            Под брендом Coral Travel работают туроператоры не только в России, но и в Германии, Украине, 
+                            Польше, Турции, Беларуси, Грузии, Латвии, Литве и Эстонии. Программы авиаперевозок осуществляются
+                            на чартерной и регулярной основе из всех аэропортов Москвы и более чем из 40 городов Российской
+                            Федерации, 5 городов Украины, 4 городов Беларуси, 13 городов Польши, 2 городов Турции, 10
+                            городов Германии, а также из стран Балтии.
+                        </p>
+
+
+                        <div class="about__subtitle">
+                            Перспективы развития
+                        </div>
+                        <p class="about__paragraph">
+                            Cпециалисты компании тщательно изучают рынок и прогнозируют дальнейшие направления развития спроса. Работа планируется на основе полученных данных с тем, чтобы направлять объемы продаж в необходимое русло. Долгосрочные планы и планы на ближайшие 3, 5 и 10 лет постоянно обновляются и дополняются с учетом анализа тенденций на рынке мирового туризма и международной политики.
+                        </p>
+                        
+                        <p class="about__paragraph">
+                            Чартерные и регулярные рейсы выполняются из всех крупнейших городов России. Компания является многопрофильном туроператором и предлагает не только отдых по массовым, экзотическим и экскурсионным направлениям, но и организацию деловых корпоративных мероприятий, спортивных сборов и тематических выездов.
+                        </p>
+
+                        <p class="about__paragraph">
+                            В целях Coral Travel — закрепление лидерских позиций как ведущего российского туроператора и увеличение занимаемой компанией доли рынка с одновременным повышением качества предлагаемого турпродукта. А также дальнейшее внедрение инновационных технологий, без которых невозможно динамичное развитие современного турбизнеса. Компания стала примером для многих российских турфирм, которые перенимают опыт Coral Travel. Это, в свою очередь, является стимулом для дальнейшего развития компании.
+                        </p>
+
+
+                        <div class="about__subtitle">
+                            Качество продукта
+                        </div>
+                        <p class="about__paragraph">
+                            Компания уделяет большое внимание клиентоориентированности и практикует в своей работе комплексный подход к качеству. Это означает качество во всем, начиная с предлагаемого продукта и заканчивая работой сотрудников всех подразделений Coral Travel. Благодаря этому визитной карточкой компании Coral Travel является неизменно высочайшее качество предоставляемых услуг.
+                        </p>
+                        
+                        <p class="about__paragraph">
+                            Осуществляется всесторонний контроль качества всех составляющих турпродукта на каждом этапе его формирования, продвижения и реализации. Coral Travel занимается внедрением требований стандарта ISO 9001.
+                        </p>
+
+                        <p class="about__paragraph">
+                            В числе постоянных партнеров Coral Travel более 14 тыс. агентств по всей России, свыше 40 авиакомпаний и более 5 тыс. отелей.
+                        </p>
+
+                        <p class="about__paragraph">
+                            Отношения с партнерами основаны на принципах открытости и порядочности, без чего невозможно строить успешный бизнес.
+                        </p>
+
+                        <p class="about__paragraph">
+                            Каждый агент, приобретая продукт Coral Travel, может быть уверен, что его клиенту будут предоставлены только качественные услуги, тщательно проверенные и отобранные экспертами компании Coral Travel. Именно поэтому продукт, предлагаемый на рынке под маркой Coral, является в глазах потребителей и партнеров синонимом надежности и качества.
+                        </p>
+
+
+                        <div class="about__subtitle">
+                            Социальная ответственность
+                        </div>
+                        <p class="about__paragraph">
+                            Компания намерена способствовать повышению престижа российской туристской отрасли, установлению честной конкуренции и цивилизованных отношений между участниками рынка. Coral Travel вносит деятельный вклад в реализацию федеральных программ в сфере туризма.
+                        </p>
+                        
+                        <p class="about__last">
+                            Компания ясно осознает свою ответственность перед обществом в целом. Многочисленные благотворительные акции компании направлены на поддержку малоимущих и нуждающихся слоев населения. Компания оказывает помощь детским домам, тесно взаимодействует с различными благотворительными фондами, уделяя особое внимание детям-сиротам и ветеранам.
+                        </p>
+                        
+                    </div>  
+                        
+                    </div>
+                </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__line">
+                    <div class="footer__info">
+                        <img src="{% static '../static/tours/images/bullon.png' %}" alt="" class="footer__logo">
+                        <span class="footer__copyright">©TravelPassion 2020-2022 </span>
+                    </div>
+                    <div class="footer__networks">
+                        <div class="footer__social">Социальные сети:</div>
+                            <div class="footer__block">
+                            <a href="https://vk.com/" class="crop"><img src="{% static '../static/tours/images/vk.png' %}" alt="" class="footer__network"></a>
+                            <a href="https://facebook.com/" class="crop"><img src="{% static '../static/tours/images/fb.png' %}" alt="" class="footer__network"></a>
+                            <a href="https://www.instagram.com/" class="crop"><img src="{% static '../static/tours/images/insta.png' %}" alt="" class="footer__network"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

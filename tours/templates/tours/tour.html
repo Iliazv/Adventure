@@ -1,0 +1,155 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type = 'text/css' href="{% static 'tours/style.css' %}">
+    <link rel="stylesheet" type = 'text/css' href="{% static 'tours/tours_style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'tours/images/fav.png' %}" />
+    <title>TravelPassion</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header class="header-tour">
+                <div class="layer">
+                <div class="container">
+                    <div class="header__row">
+                        <div class="header__logo">
+                            <a href="{% url 'main_page' %}">
+                            <img src="{% static '../static/tours/images/bullon.png' %}" alt="" class="header__logo-logo">
+                            <img src="{% static '../static/tours/images/travel.png' %}" alt="" class="header__logo-image">
+                            </a>
+                        </div>
+                        <nav class="navbar">
+                            <ul class="header__list">
+                                <li><a href="{% url 'main_page' %}" class="header__link">Главная</a></li>
+                                <li><a href="{% url 'tours' %}" class="header__link header__link_active">Туры</a></li>
+                                <li><a href="{% url 'about' %}" class="header__link">О нас</a></li>
+                                <li><a href="{% url 'gallery' %}" class="header__link">Галлерея</a></li>
+                                <li><a href="{% url 'contacts' %}" class="header__link">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="main__reference">
+                        <div class="main__text">
+                            <div class="main__name">
+                                Туры компании
+                            </div>
+                            <div class="main__space">
+                                
+                            </div>
+                        </div>                           
+                    </div>
+
+                </header>
+                <div class="container-full">
+                    {% for tour in tours %}
+                    <div class="tour">
+                        <div class="tour__proposal">
+                            <div class="tour__card">
+                                <div class="tour__image-block">
+                                    <img src="{{ tour.main_image.url }}" alt="" class="tour__image">
+                                    <div class="tour__country-label">
+                                        {{tour.country}}
+                                    </div>
+                                </div>
+                                <div class="tour__information">
+                                    <div class="tour__text">
+                                        <div class="tour__name">                                                
+                                            <a href="{% url 'proposal' arg=tour.id %}" class="tour__link">{{tour.name}}</a> 
+                                        </div>
+                                        <div class="tour__location">
+                                            <img src="{% static '../static/tours/images/pin.png' %}" alt="" class="tour__icon"><span class="tour__remove">{{tour.location}}</span>
+                                        </div>
+                                        <div class="tour__feeding">
+                                            <img src="{% static '../static/tours/images/cutlery.png' %}" alt="" class="tour__icon"><span class="tour__remove">{{tour.feeding}}</span>
+                                        </div>
+                                        <div class="tour__mark">
+                                            {{tour.rating}}
+                                        </div>
+                                    </div>
+                                    <div class="tour__rate">
+                                        {% with ''|center:tour.stars as range %}
+                                        {% for _ in range %}
+                                            <img src="{% static '../static/tours/images/star.png' %}" alt="" class="tour__star">
+                                        {% endfor %}
+                                        {% endwith %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tour__price">
+                                <div class="tour__date">
+                                    09.2022 / 10 дней
+                                </div>
+                                <div class="tour__level">
+                                    Все включено
+                                </div>
+                                <div class="tour__cost">
+                                    цена от <p class="tour__highlight">{{tour.price}} ₽</p>
+                                </div>
+                                <div class="tour__fly">
+                                    {% if tour.fly_include == 'YES' %}
+                                        перелет включен
+                                    {% else %}
+                                        перелет не включен
+                                    {% endif %}
+                                </div>
+                                <div class="tour__credit">
+                                    <div class="tour__percent">
+                                        <img src="{% static '../static/tours/images/discount.png' %}" alt="" class="tour__percent-icon">
+                                    </div> 
+                                    <div class="tour__conditions">
+                                        Доступно в рассрочку и кредит по минимальному проценту
+                                    </div>
+                                </div>
+                                <div class="tour__button">
+                                    <form action="{% url 'proposal' arg=tour.id %}" method="post">  
+                                        {% csrf_token %}
+                                        <button type="submit" class="tour__submit">Выбрать</button>
+                                    </form>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div> 
+                    {% endfor %}   
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__line">
+                    <div class="footer__info">
+                        <img src="{% static '../static/tours/images/bullon.png' %}" alt="" class="footer__logo">
+                        <span class="footer__copyright">©TravelPassion 2020-2022 </span>
+                    </div>
+                    <div class="footer__networks">
+                        <div class="footer__social">Социальные сети:</div>
+                            <div class="footer__block">
+                            <a href="https://vk.com/" class="crop"><img src="{% static '../static/tours/images/vk.png' %}" alt="" class="footer__network"></a>
+                            <a href="https://facebook.com/" class="crop"><img src="{% static '../static/tours/images/fb.png' %}" alt="" class="footer__network"></a>
+                            <a href="https://www.instagram.com/" class="crop"><img src="{% static '../static/tours/images/insta.png' %}" alt="" class="footer__network"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

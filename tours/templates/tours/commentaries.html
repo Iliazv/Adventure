@@ -1,0 +1,122 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" type = 'text/css' href="{% static 'tours/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'tours/images/fav.png' %}" />
+    <title>TravelPassion</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header class="header-advantages">
+                <div class="layer">
+                <div class="container">
+                    <div class="header__row">
+                        <div class="header__logo">
+                            <a href="{% url 'main_page' %}">
+                                <img src="{% static '../static/tours/images/bullon.png' %}" alt="" class="header__logo-logo">
+                                <img src="{% static '../static/tours/images/travel.png' %}" alt="" class="header__logo-image">
+                            </a>
+                        </div>
+                        <nav class="navbar">
+                            <ul class="header__list">
+                                <li><a href="{% url 'main_page' %}" class="header__link header__link_active">Главная</a></li>
+                                <li><a href="{% url 'tours' %}" class="header__link">Туры</a></li>
+                                <li><a href="{% url 'about' %}" class="header__link">О нас</a></li>
+                                <li><a href="{% url 'gallery' %}" class="header__link">Галлерея</a></li>
+                                <li><a href="{% url 'contacts' %}" class="header__link">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="commentary__reference">
+                        <div class="commentary__text">
+                            <div class="commentary__name">
+                                Оставить отзыв:
+                            </div>
+                            <div class="commentary__space">
+                                
+                            </div>
+                        </div> 
+                        <div class="commentary__form">
+                            <form action="{% url 'left_comment' %}" method="post">
+                                {% csrf_token %}
+                                <div class="commentary__input">
+                                    <p>{{form.name.label_tag}}</p>
+                                    {{form.name}}     
+                                </div>
+                                <div class="commentary__textarea">
+                                    <p>{{form.text.label_tag}}</p>
+                                    {{form.text}}
+                                </div>
+                                <div class="commentary__button">
+                                    <button type="submit" class="commentary__submit">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </header>
+                <div class="container">
+                    <div class="list">
+                        {% for comment in commentaries %}
+                        <div class="list__comment">
+                            <div class="list__comment-image">
+                                {% if comment.name == 'К.В. Быстров' %}
+                                    <img src="{% static '../static/tours/images/commentator1.jpg' %}" alt="" class="list__icon">
+                                {% elif comment.name == 'С.Д. Витальев' %}
+                                    <img src="{% static '../static/tours/images/commentator2.jpg' %}" alt="" class="list__icon">
+                                {% elif comment.name == "admin" %}
+                                    <img src="{% static '../static/tours/images/admin.png' %}" alt="" class="list__icon">
+                                {% else %}
+                                    <img src="{% static '../static/tours/images/user.png' %}" alt="" class="list__icon">
+                                {% endif %}
+                            </div>
+                            <div class="list__comment-text">
+                                <span class="list__comment-name">{{comment.name}}</span> <span class="list__date">• {{comment.date|timesince}}</span>
+                                <p class="list__text">{{comment.text}}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                        
+                    </div>
+                </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__line">
+                    <div class="footer__info">
+                        <img src="{% static '../static/tours/images/bullon.png' %}" alt="" class="footer__logo">
+                        <span class="footer__copyright">©TravelPassion 2020-2022 </span>
+                    </div>
+                    <div class="footer__networks">
+                        <div class="footer__social">Социальные сети:</div>
+                            <div class="footer__block">
+                            <a href="https://vk.com/" class="crop"><img src="{% static '../static/tours/images/vk.png' %}" alt="" class="footer__network"></a>
+                            <a href="https://facebook.com/" class="crop"><img src="{% static '../static/tours/images/fb.png' %}" alt="" class="footer__network"></a>
+                            <a href="https://www.instagram.com/" class="crop"><img src="{% static '../static/tours/images/insta.png' %}" alt="" class="footer__network"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

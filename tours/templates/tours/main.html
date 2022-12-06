@@ -1,0 +1,325 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type='text/css' href="{% static 'tours/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&family=PT+Serif&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'tours/images/fav.png' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <title>TravelPassion</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header class="header">
+                <div class="layer-main">
+                    <div class="container">
+                        <div class="header__row">
+                            <div class="header__logo">
+                                <a href="{% url 'main_page' %}">
+                                    <img src="{% static '../static/tours/images/bullon.png' %}" alt="" class="header__logo-logo">
+                                    <img src="{% static '../static/tours/images/travel.png' %}" alt="" class="header__logo-image">
+                                </a>
+                            </div>
+                            <nav class="navbar">
+                                <ul class="header__list">
+                                    <li><a href="{% url 'main_page' %}"
+                                            class="header__link header__link_active">Главная</a></li>
+                                    <li><a href="{% url 'tours' %}" class="header__link">Туры</a></li>
+                                    <li><a href="{% url 'about' %}" class="header__link">О нас</a></li>
+                                    <li><a href="{% url 'gallery' %}" class="header__link">Галлерея</a></li>
+                                    <li><a href="{% url 'contacts' %}" class="header__link">Контакты</a></li>
+                                </ul>
+                            </nav>
+
+                        </div>
+
+
+
+                        <div class="header__reference">
+                            <div class="header__text">
+                                <div class="header__name">
+                                    ПУТЕШЕСТВОВАТЬ
+                                    <span class="header__name_black">КРАСИВО</span>
+                                </div>
+                                <div class="header__info">
+                                    Наша компания предлагает самые горячие туры по различным странам. Вы можете
+                                    отправиться в
+                                    путешествие прямо сегодня!
+                                </div>
+                            </div>
+                            <div class="header__block-form">
+                                <div class="header__form-name">
+                                    Связаться с поддержкой
+                                </div>
+                                <div class="header__form-request">
+                                    <form action="{% url 'left_message' %}" method="post" class="header__form-column">
+                                        {% csrf_token %}
+                                        <input type="text" name="FIO" placeholder="ФИО" class="header__form-inpt">
+                                        <input type="text" name = "address" placeholder="Адрес почты" class="header__form-inpt">
+                                        <input type="text" name = "phone" placeholder="Номер телефона" class="header__form-inpt">
+                                        <input type="text" name = "country" placeholder="Страна" class="header__form-inpt">
+                                        <input id="highload1" class="header__checkbox" name="highload0" type="checkbox" required>
+                                        <label for="highload1" class="header__checkbox-text">Я принимаю условия</label>
+                                        <button type="submit" class="header__btn">Отправить</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    </header>
+                <div class="container">
+                    <div class="projects">
+                        <div class="projects__name">
+                            Наши услуги
+                        </div>
+                        <div class="projects__row">
+                            <div class="projects__box">
+                                <div class="projects__image-block">
+                                    <img src="{% static '../static/tours/images/heart.png' %}" alt=""
+                                        class="projects__image">
+                                </div>
+                                <div class="projects__text">
+                                    Мы предлагаем самые лучшие туры по всему миру
+                                </div>
+                            </div>
+
+                            <div class="projects__box">
+                                <div class="projects__image-block">
+                                    <img src="{% static '../static/tours/images/tool.png' %}" alt=""
+                                        class="projects__image">
+                                </div>
+                                <div class="projects__text projects__text_2">
+                                    С помощью сайта вы можете выбрать самый оптимальный вариант
+                                </div>
+                            </div>
+
+                            <div class="projects__box">
+                                <div class="projects__image-block lower-block">
+                                    <img src="{% static '../static/tours/images/lamp.png' %}" alt=""
+                                        class="projects__image projects__image_lamp">
+                                </div>
+                                <div class="projects__text projects__text_3">
+                                    С помощью отзывов мы можем подсказать вам куда отправиться
+                                </div>
+                            </div>
+
+                            <div class="projects__box">
+                                <div class="projects__image-block lower-block">
+                                    <img src="{% static '../static/tours/images/nav.png' %}" alt=""
+                                        class="projects__image">
+                                </div>
+                                <div class="projects__text projects__text_4">
+                                    На сайте вы подробно изучите маршруты и пути
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="redbar">
+                    <div class="container">
+                        <div class="redbar__line">
+                            <div class="redbar__text">
+                                <span class="change-text">Мы предоставляем нашим клиентам гарантии качества и безопасности. Узнайте
+                                больше о наших преимуществах</span>
+                            </div>
+                            <form action="{% url 'advantages' %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="redbar__btn">Преимущества</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pricing">
+                    <div class="container">
+                        <div class="pricing__index">
+                            Туры
+                        </div>
+                        <div class="pricing__cards">
+                            
+                                <div class="pricing__card pricing__card_1">
+                                    <div class="pricing__country">
+                                        Турция
+                                    </div>
+
+                                    <div class="pricing__cost">
+                                        165000 ₽ <span class="pricing__average">/</span>
+                                    </div>
+
+                                    <div class="pricing__average">
+                                        Средняя цена за билет
+                                    </div>
+
+                                    <div class="pricing__button-block">
+                                        <form action="{% url 'category_tour' arg='turk' %}" method="post">
+                                            {% csrf_token %}
+                                            <button type="submit" class="pricing__btn pricing__btn_signup">Посмотреть</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            
+
+                            <div class="pricing__card pricing__card_2">
+                                <div class="pricing__popular">
+                                    <span class="pricing__tag">Popular</span>
+                                </div>
+                                <div class="pricing__country">
+                                    ОАЭ
+                                </div>
+
+                                <div class="pricing__cost">
+                                    265000 ₽ <span class="pricing__average">/</span>
+                                </div>
+
+                                <div class="pricing__average">
+                                    Средняя цена за билет
+                                </div>
+
+                                <div class="pricing__button-block">
+                                    <form action="{% url 'category_tour' arg='arab' %}" method="post">
+                                        {% csrf_token %}
+                                        <button type="submit" class="pricing__btn pricing__btn_signup">Посмотреть</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="pricing__card pricing__card_3">
+                                <div class="pricing__country">
+                                    Вьетнам
+                                </div>
+
+                                <div class="pricing__cost">
+                                    98000 ₽ <span class="pricing__average">/</span>
+                                </div>
+
+                                <div class="pricing__average">
+                                    Средняя цена за билет
+                                </div>
+
+                                <div class="pricing__button-block">
+                                    <form action="{% url 'category_tour' arg='viet' %}" method="post">
+                                        {% csrf_token %}
+                                        <button type="submit" class="pricing__btn pricing__btn_signup">Посмотреть</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews">
+                    <div class="container">
+                        <div class="reviews__block">
+                            <div class="reviews__testimonials">
+                                <div class="reviews__testimonials-name">
+                                    Отзывы
+                                </div>
+                                <div class="reviews__comment">
+                                    <div class="reviews__text">
+                                        TravelPassion - это прекрасная компания из турогенства в которой мне 
+                                        посчастливилось работать.
+                                    </div>
+                                    <div class="reviews__person">
+                                        К.В. Быстров - Ведущий менеджер
+                                    </div>
+                                    <div class="reviews__photo">
+                                        <img src="{% static '../static/tours/images/commentator1.jpg' %}" alt="" class="reviews__photo-img">
+                                    </div>
+                                </div>
+
+                                <div class="reviews__comment reviews__comment_paint">
+                                    <div class="reviews__text">
+                                        Для меня TravelPassion одно из самых лучших турогенств с тех пор как я 
+                                        узнал про него.
+                                    </div>
+                                    <div class="reviews__person">
+                                        С.Д. Витальев - Частый клиент
+                                    </div>
+                                    <div class="reviews__photo reviews__photo_moved">
+                                        <img src="{% static '../static/tours/images/commentator2.jpg' %}" alt="" class="reviews__photo-img">
+                                    </div>
+                                </div>
+                                <div class="reviews__link-block">
+                                    <a href="{% url 'comment_block' %}" method="post" class="reviews__link">Смотреть все комментарии</a>
+                                </div>
+                            </div>
+
+                            <div class="reviews__gallery">
+                                <div class="reviews__gallery-name">
+                                    Галлерея
+                                </div>
+                                <div class="reviews__gallery-block">
+                                    <div class="reviews__gallery-photo">
+                                        <img src="{% static '../static/tours/images/travel_img1.png' %}" alt=""
+                                            class="reviews_gallery-photo">
+                                    </div>
+                                    <div class="reviews__gallery-photo">
+                                        <img src="{% static '../static/tours/images/travel_img2.png' %}" alt=""
+                                            class="reviews_gallery-photo">
+                                    </div>
+                                    <div class="reviews__gallery-photo">
+                                        <img src="{% static '../static/tours/images/travel_img3.png' %}" alt=""
+                                            class="reviews_gallery-photo">
+                                    </div>
+                                    <div class="reviews__gallery-photo">
+                                        <img src="{% static '../static/tours/images/travel_img4.png' %}" alt=""
+                                            class="reviews_gallery-photo">
+                                    </div>
+                                    <div class="reviews__gallery-photo">
+                                        <img src="{% static '../static/tours/images/travel_img5.png' %}" alt=""
+                                            class="reviews_gallery-photo">
+                                    </div>
+                                    <div class="reviews__gallery-photo">
+                                        <img src="{% static '../static/tours/images/travel_img6.png' %}" alt=""
+                                            class="reviews_gallery-photo">
+                                    </div>
+                                    <div class="reviews__link-block">
+                                        <a href="{% url 'gallery' %}" class="reviews__link">СМОТРЕТЬ БОЛЬШЕ ФОТО</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__line">
+                    <div class="footer__info">
+                        <img src="{% static '../static/tours/images/bullon.png' %}" alt="" class="footer__logo">
+                        <span class="footer__copyright">©TravelPassion 2020-2022 </span>
+                    </div>
+                    <div class="footer__networks">
+                        <div class="footer__social">Социальные сети:</div>
+                            <div class="footer__block">
+                            <a href="https://vk.com/" class="crop"><img src="{% static '../static/tours/images/vk.png' %}" alt="" class="footer__network"></a>
+                            <a href="https://facebook.com/" class="crop"><img src="{% static '../static/tours/images/fb.png' %}" alt="" class="footer__network"></a>
+                            <a href="https://www.instagram.com/" class="crop"><img src="{% static '../static/tours/images/insta.png' %}" alt="" class="footer__network"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
